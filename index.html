@@ -13,10 +13,21 @@
 
     body {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       height: 100vh;
       background-color: #f0f0f0;
+    }
+
+    header, footer {
+      width: 100%;
+      text-align: center;
+      padding: 10px;
+      background-color: #ff8c00;
+      color: white;
+      font-size: 1.2rem;
+      font-weight: bold;
     }
 
     .calculator {
@@ -24,6 +35,7 @@
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       background-color: white;
+      margin: 20px 0;
     }
 
     .display {
@@ -68,6 +80,13 @@
   </style>
 </head>
 <body>
+
+  <!-- Header Section -->
+  <header>
+    Simple Calculator
+  </header>
+
+  <!-- Calculator Section -->
   <div class="calculator">
     <input type="text" id="display" class="display" disabled />
     <div class="buttons">
@@ -92,6 +111,11 @@
       <button class="button operator" onclick="setOperator('/')">/</button>
     </div>
   </div>
+
+  <!-- Footer Section -->
+  <footer>
+    Created by Aayush Baral
+  </footer>
 
   <script>
     let display = document.getElementById("display");
